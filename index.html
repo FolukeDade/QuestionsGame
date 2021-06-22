@@ -27,7 +27,7 @@
         for (var x = 0; x < questions.length; x++) {
             var response = confirm(questions[x].q);
 
-            if ((response === true && questions[x].a === "yes") || (answer === false && questions[x].a === "no")) {
+            if ((response === true && questions[x].a === "yes") || (response === false && questions[x].a === "no")) {
                 score++;
                 alert("That's correct.");
                 }
@@ -36,7 +36,7 @@
                 }
 
         }
-        alert("You got " + score + "out of" + questions.length);
+        alert("You got " + score + " out of " + questions.length);
 
     </script>
 </body>
