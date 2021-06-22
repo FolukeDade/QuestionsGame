@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var questions = [
+            {q : "Does your name begin with an alphabet?", a : "yes"},
+            {q : "Is your hair black?", a : "yes"},
+            {q : "Is your hair blue?", a : "no"},
+            {q : "Are happy?", a : "yes"},
+            {q : "Are you sad?", a : "no"},
+            {q : "Do you drive?", a : "yes"},
+            {q : "Do you like cars?", a : "yes"},
+            {q : "Do you have a favorite car?", a : "yes"},
+            {q : "Do you have a favorite color?", a : "no"},
+            {q : "Do you have a favorite hobby?", a : "yes"}
+
+        ];
+
+        for (var x = 0; x < questions.length; x++) {
+            var response = confirm(questions[x].q);
+
+            if ((response === true && questions[x].a === "yes") || ( answer === false && questions[x].a === "no")) {
+                score++;
+                alert("That's correct.");
+                }
+                else {
+                    alert("That's wrong.");
+                }
+
+        }
+        alert("You got " + score + "out of" + questions.length);
+        
+    </script>
+</body>
+</html>
