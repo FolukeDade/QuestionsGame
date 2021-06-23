@@ -9,34 +9,34 @@
 <body>
     <script>
         var questions = [
-            {q : "Does your name begin with an alphabet?", a : "yes"},
-            {q : "Is your hair black?", a : "yes"},
-            {q : "Is your hair blue?", a : "no"},
-            {q : "Are happy?", a : "yes"},
-            {q : "Are you sad?", a : "no"},
-            {q : "Do you drive?", a : "yes"},
-            {q : "Do you like cars?", a : "yes"},
-            {q : "Do you have a favorite car?", a : "yes"},
-            {q : "Do you have a favorite color?", a : "no"},
-            {q : "Do you have a favorite hobby?", a : "yes"}
+            {question : "Does your name begin with an alphabet?", answer : "yes"},
+            {question : "Is your hair black?", answer : "yes"},
+            {question : "Is your hair blue?", answer : "no"},
+            {question : "Are happy?", answer : "yes"},
+            {question : "Are you sad?", answer : "no"},
+            {question : "Do you drive?", answer : "yes"},
+            {question : "Do you like cars?", answer : "yes"},
+            {question : "Do you have a favorite car?", answer : "yes"},
+            {question : "Do you have a favorite color?", answer : "no"},
+            {question : "Do you have a favorite hobby?", answer : "yes"}
 
         ];
 
         var score = 0;
 
         for (var x = 0; x < questions.length; x++) {
-            var response = confirm(questions[x].q);
+            var response = confirm(questions[x].question);
 
-            if ((response === true && questions[x].a === "yes") || (response === false && questions[x].a === "no")) {
+            if (response === true && questions[x].answer === "yes" || questions[x].answer === "y")  {
                 score++;
                 alert("That's correct.");
                 }
-                else {
-                    alert("That's wrong.");
+                else if(response === false && questions[x].answer === "no" || questions[x].answer === "n") {
+                    alert("That's incorrect.");
                 }
 
         }
-        alert("You got " + score + " out of " + questions.length);
+        alert("You made a " + score + " out of " + questions.length);
 
     </script>
 </body>
